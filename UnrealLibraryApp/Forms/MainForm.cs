@@ -167,6 +167,12 @@ namespace UnrealLibraryApp
             graphForm.Show();
         }
 
+        private void buttonTitleForm_Click(object sender, EventArgs e)
+        {
+            TitleForm titleForm = new TitleForm();
+            titleForm.Show();
+        }
+
         #endregion
 
         #region BookLogic

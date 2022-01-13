@@ -57,6 +57,7 @@ namespace UnrealLibraryApp
             this.buttonDeleteBookFromLib = new System.Windows.Forms.Button();
             this.textBoxBookYear = new System.Windows.Forms.TextBox();
             this.labelBookYear = new System.Windows.Forms.Label();
+            this.buttonTitleForm = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBookMark)).BeginInit();
             this.SuspendLayout();
@@ -304,11 +305,22 @@ namespace UnrealLibraryApp
             this.labelBookYear.TabIndex = 20;
             this.labelBookYear.Text = "Год издания:";
             // 
+            // buttonTitleForm
+            // 
+            this.buttonTitleForm.Location = new System.Drawing.Point(176, 266);
+            this.buttonTitleForm.Name = "buttonTitleForm";
+            this.buttonTitleForm.Size = new System.Drawing.Size(96, 23);
+            this.buttonTitleForm.TabIndex = 21;
+            this.buttonTitleForm.Text = "Титульный лист";
+            this.buttonTitleForm.UseVisualStyleBackColor = true;
+            this.buttonTitleForm.Click += new System.EventHandler(this.buttonTitleForm_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 294);
+            this.Controls.Add(this.buttonTitleForm);
             this.Controls.Add(this.labelBookYear);
             this.Controls.Add(this.textBoxBookYear);
             this.Controls.Add(this.buttonDeleteBookFromLib);
@@ -370,6 +382,7 @@ namespace UnrealLibraryApp
         private System.Windows.Forms.ToolStripMenuItem сохранитьФайлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem манифестКоммунистическойПартииToolStripMenuItem;
+        private System.Windows.Forms.Button buttonTitleForm;
     }
 }
 

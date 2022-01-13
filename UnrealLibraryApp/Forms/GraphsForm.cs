@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnrealLibraryApp.Lib;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace UnrealLibraryApp.Forms
 {
@@ -63,14 +64,17 @@ namespace UnrealLibraryApp.Forms
            {
             this.chartGenreBooks.Titles.Clear();
             this.chartGenreBooks.Series.Clear();
+            this.chartGenreBooks.Series.Add("0");
+            this.chartGenreBooks.Series[0].IsValueShownAsLabel = true;
 
             var GenreList = lib.Books.GroupBy(b => b.Genre).ToList();
+            this.chartGenreBooks.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
 
             foreach (IGrouping<string, Book> b in GenreList)
             {
-                this.chartGenreBooks.Series.Add(b.Key);
-                this.chartGenreBooks.Series[b.Key].Points.Add(b.Count());
+                this.chartGenreBooks.Series[0].Points.AddXY(b.Key, b.Count());
             }
+            this.chartGenreBooks.Series[0].Sort(PointSortOrder.Descending);
         }
     }
 }

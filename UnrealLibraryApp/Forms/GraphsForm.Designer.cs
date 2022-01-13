@@ -38,6 +38,9 @@ namespace UnrealLibraryApp.Forms
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GraphsForm));
             this.tabControlGraphs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -46,6 +49,8 @@ namespace UnrealLibraryApp.Forms
             this.chartMarkBooks = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.chartGenreBooks = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.chartReadBooksByMonths = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControlGraphs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartReadBooks)).BeginInit();
@@ -53,6 +58,8 @@ namespace UnrealLibraryApp.Forms
             ((System.ComponentModel.ISupportInitialize)(this.chartMarkBooks)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartGenreBooks)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartReadBooksByMonths)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlGraphs
@@ -60,6 +67,7 @@ namespace UnrealLibraryApp.Forms
             this.tabControlGraphs.Controls.Add(this.tabPage1);
             this.tabControlGraphs.Controls.Add(this.tabPage2);
             this.tabControlGraphs.Controls.Add(this.tabPage3);
+            this.tabControlGraphs.Controls.Add(this.tabPage4);
             this.tabControlGraphs.Location = new System.Drawing.Point(12, 12);
             this.tabControlGraphs.Name = "tabControlGraphs";
             this.tabControlGraphs.SelectedIndex = 0;
@@ -141,12 +149,40 @@ namespace UnrealLibraryApp.Forms
             this.chartGenreBooks.Location = new System.Drawing.Point(7, 7);
             this.chartGenreBooks.Name = "chartGenreBooks";
             series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series3.Legend = "Legend1";
-            series3.Name = "Series1";
+            series3.Name = "Series";
+            series3.YValuesPerPoint = 4;
             this.chartGenreBooks.Series.Add(series3);
             this.chartGenreBooks.Size = new System.Drawing.Size(324, 290);
             this.chartGenreBooks.TabIndex = 0;
             this.chartGenreBooks.Text = "chart1";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.chartReadBooksByMonths);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(337, 303);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Прочтённые книги по месяцам";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // chartReadBooksByMonths
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chartReadBooksByMonths.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartReadBooksByMonths.Legends.Add(legend4);
+            this.chartReadBooksByMonths.Location = new System.Drawing.Point(3, 3);
+            this.chartReadBooksByMonths.Name = "chartReadBooksByMonths";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartReadBooksByMonths.Series.Add(series4);
+            this.chartReadBooksByMonths.Size = new System.Drawing.Size(331, 297);
+            this.chartReadBooksByMonths.TabIndex = 0;
+            this.chartReadBooksByMonths.Text = "chart1";
             // 
             // GraphsForm
             // 
@@ -164,6 +200,8 @@ namespace UnrealLibraryApp.Forms
             ((System.ComponentModel.ISupportInitialize)(this.chartMarkBooks)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartGenreBooks)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartReadBooksByMonths)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,5 +215,7 @@ namespace UnrealLibraryApp.Forms
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMarkBooks;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGenreBooks;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartReadBooksByMonths;
     }
 }

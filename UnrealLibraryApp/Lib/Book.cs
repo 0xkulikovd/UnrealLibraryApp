@@ -15,6 +15,7 @@ namespace UnrealLibraryApp.Lib
         private bool readen = false;
         private int mark = 0;
         private string comment = "";
+        private DateTime dayRead = DateTime.Now;
 
         public Book()
         {
@@ -40,5 +41,6 @@ namespace UnrealLibraryApp.Lib
         public bool Readen { get => readen; set => readen = value; }
         public int Mark { get => mark; set => mark = value; }
         public string Comment { get => comment; set => comment = value; }
+        public DateTime DayRead { get => dayRead; set => dayRead = value; }
     }
 }

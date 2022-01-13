@@ -58,6 +58,8 @@ namespace UnrealLibraryApp
             this.textBoxBookYear = new System.Windows.Forms.TextBox();
             this.labelBookYear = new System.Windows.Forms.Label();
             this.buttonTitleForm = new System.Windows.Forms.Button();
+            this.dateTimePickerDayRead = new System.Windows.Forms.DateTimePicker();
+            this.labelDayRead = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBookMark)).BeginInit();
             this.SuspendLayout();
@@ -315,11 +317,33 @@ namespace UnrealLibraryApp
             this.buttonTitleForm.UseVisualStyleBackColor = true;
             this.buttonTitleForm.Click += new System.EventHandler(this.buttonTitleForm_Click);
             // 
+            // dateTimePickerDayRead
+            // 
+            this.dateTimePickerDayRead.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDayRead.Location = new System.Drawing.Point(297, 130);
+            this.dateTimePickerDayRead.Name = "dateTimePickerDayRead";
+            this.dateTimePickerDayRead.Size = new System.Drawing.Size(91, 20);
+            this.dateTimePickerDayRead.TabIndex = 22;
+            this.dateTimePickerDayRead.Visible = false;
+            this.dateTimePickerDayRead.ValueChanged += new System.EventHandler(this.dateTimePickerDayRead_ValueChanged);
+            // 
+            // labelDayRead
+            // 
+            this.labelDayRead.AutoSize = true;
+            this.labelDayRead.Location = new System.Drawing.Point(199, 133);
+            this.labelDayRead.Name = "labelDayRead";
+            this.labelDayRead.Size = new System.Drawing.Size(92, 13);
+            this.labelDayRead.TabIndex = 23;
+            this.labelDayRead.Text = "День прочтения:";
+            this.labelDayRead.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 294);
+            this.Controls.Add(this.labelDayRead);
+            this.Controls.Add(this.dateTimePickerDayRead);
             this.Controls.Add(this.buttonTitleForm);
             this.Controls.Add(this.labelBookYear);
             this.Controls.Add(this.textBoxBookYear);
@@ -383,6 +407,8 @@ namespace UnrealLibraryApp
         private System.Windows.Forms.ToolStripMenuItem оToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem манифестКоммунистическойПартииToolStripMenuItem;
         private System.Windows.Forms.Button buttonTitleForm;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDayRead;
+        private System.Windows.Forms.Label labelDayRead;
     }
 }
 

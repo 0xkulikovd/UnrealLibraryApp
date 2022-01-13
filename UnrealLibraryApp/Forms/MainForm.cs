@@ -55,6 +55,7 @@ namespace UnrealLibraryApp
             textBoxBookYear.Text = currentLib.Books[currentBookIndex].Year;
             textBoxBookComment.Text = currentLib.Books[currentBookIndex].Comment;
             numericUpDownBookMark.Value = currentLib.Books[currentBookIndex].Mark;
+            dateTimePickerDayRead.Value = currentLib.Books[currentBookIndex].DayRead;
             if (currentLib.Books[currentBookIndex].Readen == true)
             {
                 checkBoxBookRead.CheckState = CheckState.Checked;
@@ -207,10 +208,14 @@ namespace UnrealLibraryApp
             if (checkBoxBookRead.CheckState == CheckState.Checked)
             {
                 currentLib.Books[currentBookIndex].Readen = true;
+                labelDayRead.Visible = true;
+                dateTimePickerDayRead.Visible = true;
             }
             else
             {
                 currentLib.Books[currentBookIndex].Readen = false;
+                labelDayRead.Visible = false;
+                dateTimePickerDayRead.Visible = false;
             }
             currentFile.FileChanged = true;
         }
@@ -232,6 +237,11 @@ namespace UnrealLibraryApp
             UpdateLibrary();
         }
 
+
+        private void dateTimePickerDayRead_ValueChanged(object sender, EventArgs e)
+        {
+            currentLib.Books[currentBookIndex].DayRead = dateTimePickerDayRead.Value;
+        }
 
         #endregion
 

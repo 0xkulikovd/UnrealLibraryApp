@@ -24,6 +24,7 @@ namespace UnrealLibraryApp.Forms
             UpdateChartReadBooks(lib);
             UpdateChartMarkBooks(lib);
             UpdateChartGenreBooks(lib);
+            UpdateChartReadBooksByMonth(lib);
         }
 
         public void UpdateChartReadBooks(Library lib)
@@ -75,6 +76,25 @@ namespace UnrealLibraryApp.Forms
                 this.chartGenreBooks.Series[0].Points.AddXY(b.Key, b.Count());
             }
             this.chartGenreBooks.Series[0].Sort(PointSortOrder.Descending);
+        }
+
+        public void UpdateChartReadBooksByMonth(Library lib)
+        {
+            this.chartReadBooksByMonth.Titles.Clear();
+            this.chartReadBooksByMonth.Series.Clear();
+
+
+            var MonthList = lib.Books
+                        .Where(g => g.Readen == true)
+                        .GroupBy(x => new { x.DayRead.Month, x.DayRead.Year })
+                        .OrderByDescending(g => g.Key.Year).ThenBy(g => g.Key.Month);
+
+            foreach (var m in MonthList)
+            {
+                DateTime d = new DateTime(m.Key.Year, m.Key.Month, DateTime.Now.Day);
+                this.chartReadBooksByMonth.Series.Add(d.ToString("Y"));
+                this.chartReadBooksByMonth.Series[d.ToString("Y")].Points.Add(m.Count());
+            }
         }
     }
 }

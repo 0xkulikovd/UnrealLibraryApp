@@ -26,12 +26,12 @@ namespace UnrealLibraryApp.Forms
             UpdateChartGenreBooks(lib);
             UpdateChartReadBooksByMonth(lib);
         }
-
+        // Логику по подготовке данных для графиков либо в отдельный класс либо в Library
         public void UpdateChartReadBooks(Library lib)
         {
             this.chartReadBooks.Titles.Clear();
             this.chartReadBooks.Series.Clear();
-
+            // Ты уже спалился, что знаешь про нруппировку... 
             string[] seriesArray = { "Прочитанные книги", "Непрочитанные книги" };
             int[] pointsArray = { lib.Books.Where(t => t.Readen.Equals(true)).Count(), lib.Books.Where(t => t.Readen.Equals(false)).Count() };
 
@@ -46,7 +46,7 @@ namespace UnrealLibraryApp.Forms
         {
             this.chartMarkBooks.Titles.Clear();
             this.chartMarkBooks.Series.Clear();
-
+            // Это что засрань....
             string[] seriesArray = { "5", "4", "3", "2", "1", "Не оценено / 0" };
             int[] pointsArray = { lib.Books.Where(t => t.Mark.Equals(5)).Count(),
                 lib.Books.Where(t => t.Mark.Equals(4)).Count(), lib.Books.Where(t => t.Mark.Equals(3)).Count(),
@@ -83,7 +83,7 @@ namespace UnrealLibraryApp.Forms
             this.chartReadBooksByMonth.Titles.Clear();
             this.chartReadBooksByMonth.Series.Clear();
 
-
+            // А то есть про группировку ты знаешь, а почему не пользуешься в UpdateChartMarkBooks?
             var MonthList = lib.Books
                         .Where(g => g.Readen == true)
                         .GroupBy(x => new { x.DayRead.Month, x.DayRead.Year })

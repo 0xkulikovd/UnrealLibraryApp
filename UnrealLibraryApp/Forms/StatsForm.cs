@@ -23,6 +23,7 @@ namespace UnrealLibraryApp
             labelBookCount.Text = lib.Count.ToString();
             labelReadBookCount.Text = lib.GetBookCountByRead(true).ToString();
             labelUnReadBookCount.Text = lib.GetBookCountByRead(false).ToString();
+            // Можно сделать умнее
             label0Mark.Text = lib.GetBookCountByMark(0).ToString();
             label1Mark.Text = lib.GetBookCountByMark(1).ToString();
             label2Mark.Text = lib.GetBookCountByMark(2).ToString();

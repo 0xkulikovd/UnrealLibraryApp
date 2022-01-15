@@ -8,6 +8,7 @@ namespace UnrealLibraryApp.Lib
 {
     public class Book
     {
+        // А если смысл в этих полях?
         private string name = "";
         private string author = "";
         private string year = "";
@@ -26,6 +27,8 @@ namespace UnrealLibraryApp.Lib
         {
             this.Name = inputName;
         }
+
+        // Судя по количеству ссылок на конструктор, смысла в нем нет
         public Book(string inputName, string inputAuthor, string inputYear, string inputGenre)
         {
             this.Name = inputName;

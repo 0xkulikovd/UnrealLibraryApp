@@ -8,8 +8,8 @@ using System.IO;
 
 // TO DO
 // + try/catch on writing/reading files
-// - graphs
-// - stats
+// + graphs
+// + stats
 // - module tests
 // + fileChanged flag 
 

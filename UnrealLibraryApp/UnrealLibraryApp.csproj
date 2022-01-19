@@ -108,6 +108,7 @@
       <DependentUpon>TitleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Lib\Book.cs" />
+    <Compile Include="Lib\BookGraph.cs" />
     <Compile Include="Lib\File.cs" />
     <Compile Include="Lib\Library.cs" />
     <Compile Include="Forms\MainForm.cs">

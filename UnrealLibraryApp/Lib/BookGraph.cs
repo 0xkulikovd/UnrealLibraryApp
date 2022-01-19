@@ -15,9 +15,8 @@ namespace UnrealLibraryApp.Lib
         { 
             chart.Titles.Clear();
             chart.Series.Clear();
-            // Ты уже спалился, что знаешь про нруппировку... 
             string[] seriesArray = { "Прочитанные книги", "Непрочитанные книги" };
-            int[] pointsArray = { lib.Books.Where(t => t.Readen.Equals(true)).Count(), lib.Books.Where(t => t.Readen.Equals(false)).Count() };
+            int[] pointsArray = { lib.GetBookCountByRead(true), lib.GetBookCountByRead(false) };
 
             for (int i = 0; i < seriesArray.Length; i++)
             {
@@ -30,12 +29,10 @@ namespace UnrealLibraryApp.Lib
         {
             chart.Titles.Clear();
             chart.Series.Clear();
-            // Это что засрань....
             string[] seriesArray = { "5", "4", "3", "2", "1", "Не оценено / 0" };
-            int[] pointsArray = { lib.Books.Where(t => t.Mark.Equals(5)).Count(),
-                lib.Books.Where(t => t.Mark.Equals(4)).Count(), lib.Books.Where(t => t.Mark.Equals(3)).Count(),
-                lib.Books.Where(t => t.Mark.Equals(2)).Count(), lib.Books.Where(t => t.Mark.Equals(1)).Count(),
-                lib.Books.Where(t => t.Mark.Equals(0)).Count(),};
+            int[] pointsArray = { lib.GetBookCountByMark(5), lib.GetBookCountByMark(4), 
+                lib.GetBookCountByMark(3), lib.GetBookCountByMark(2), 
+                lib.GetBookCountByMark(1), lib.GetBookCountByMark(0)};
 
             for (int i = 0; i < seriesArray.Length; i++)
             {
@@ -67,7 +64,6 @@ namespace UnrealLibraryApp.Lib
             chart.Titles.Clear();
             chart.Series.Clear();
 
-            // А то есть про группировку ты знаешь, а почему не пользуешься в UpdateChartMarkBooks?
             var MonthList = lib.Books
                         .Where(g => g.Readen == true)
                         .GroupBy(x => new { x.DayRead.Month, x.DayRead.Year })

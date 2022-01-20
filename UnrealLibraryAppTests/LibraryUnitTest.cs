@@ -3,6 +3,7 @@ using UnrealLibraryApp.Lib;
 
 namespace UnrealLibraryAppTests
 {
+    // А как же проверка сохранения и загрузки файла...
     [TestClass]
     public class LibraryUnitTest
     {

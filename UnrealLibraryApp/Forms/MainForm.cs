@@ -35,6 +35,8 @@ namespace UnrealLibraryApp
             UpdateBook(0);
             Text = $"UNREAL LIBRARY - Новая библиотека";
         }
+
+        // Почему обновление библиотеки это задача формы?
         public void UpdateLibrary()
         {
             listBoxBookList.Items.Clear();
@@ -45,6 +47,7 @@ namespace UnrealLibraryApp
             }
         }
 
+        // это верно только от части....
         public void UpdateBook(int ind)
         {
             if (ind == -1) { currentBookIndex = 0;}
@@ -114,6 +117,7 @@ namespace UnrealLibraryApp
             MessageBox.Show("Файл сохранён");
         }
 
+        // Я оценю если прочитаешь и поймешь... Здесь этому не место
         private void манифестКоммунистическойПартииToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ManifestForm manForm = new ManifestForm();
@@ -176,6 +180,7 @@ namespace UnrealLibraryApp
 
         #endregion
 
+        // Логика книжки должна быть в книжке, ну или хотя бы в библиотеке
         #region BookLogic
         private void textBoxBookComment_TextChanged(object sender, EventArgs e)
         {

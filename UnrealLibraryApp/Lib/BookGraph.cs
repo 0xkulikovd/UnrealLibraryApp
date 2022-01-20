@@ -11,6 +11,8 @@ namespace UnrealLibraryApp.Lib
 {
     static class BookGraph
     {
+        // Сюда нужно подавать уже обработанные данные, готовые для визуализации
+        // Это я про все методы
         public static void UpdateChartReadBooks(Library lib, Chart chart)
         { 
             chart.Titles.Clear();
@@ -30,6 +32,7 @@ namespace UnrealLibraryApp.Lib
             chart.Titles.Clear();
             chart.Series.Clear();
             string[] seriesArray = { "5", "4", "3", "2", "1", "Не оценено / 0" };
+            // Xватит делать вид что ты не знаешь про GroupBy
             int[] pointsArray = { lib.GetBookCountByMark(5), lib.GetBookCountByMark(4), 
                 lib.GetBookCountByMark(3), lib.GetBookCountByMark(2), 
                 lib.GetBookCountByMark(1), lib.GetBookCountByMark(0)};

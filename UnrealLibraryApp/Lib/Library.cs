@@ -35,6 +35,8 @@ namespace UnrealLibraryApp.Lib
             }
         }
 
+        // Катастрофичкски мало запросов
+
         public int GetBookCountByRead(bool b)
         {
                 return this.Books.Where(t => t.Readen.Equals(b)).Count();
@@ -48,12 +50,18 @@ namespace UnrealLibraryApp.Lib
             }
             else
             {
+                //this.Books.Count(t => t.Mark.Equals(m));
                 return this.Books.Where(t => t.Mark.Equals(m)).Count();
             }
         }
 
         public int GetBookCountByComment(bool b)
         {
+            // А если просто b поставить?
+            // var readedBooks = this.Books.Count(t => t.Comment.Equals(""))
+            // return b
+            //  ? this.Count - readedBooks
+            //  : readedBooks 
             if (b == true)
             {
                 return this.Count - this.Books.Where(t => t.Comment.Equals("")).Count();

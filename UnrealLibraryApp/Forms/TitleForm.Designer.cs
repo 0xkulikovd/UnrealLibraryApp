@@ -81,9 +81,9 @@ namespace UnrealLibraryApp.Forms
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(9, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(242, 13);
+            this.label4.Size = new System.Drawing.Size(376, 13);
             this.label4.TabIndex = 4;
-            this.label4.Text = "\"Реализация книжной библиотеки в виде ПО\"";
+            this.label4.Text = "\"Разработка приложения учёта книжного фонда домашней библиотеки\"";
             // 
             // label5
             // 

@@ -95,12 +95,6 @@
     <Compile Include="Forms\StatsForm.Designer.cs">
       <DependentUpon>StatsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManifestForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ManifestForm.Designer.cs">
-      <DependentUpon>ManifestForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\TitleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,9 +118,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StatsForm.resx">
       <DependentUpon>StatsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ManifestForm.resx">
-      <DependentUpon>ManifestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

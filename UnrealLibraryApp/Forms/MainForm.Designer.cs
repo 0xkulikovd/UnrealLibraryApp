@@ -37,7 +37,6 @@ namespace UnrealLibraryApp
             this.сохранитьФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.оToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.манифестКоммунистическойПартииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelBookName = new System.Windows.Forms.Label();
             this.labelBookAuthor = new System.Windows.Forms.Label();
             this.labelBookGenre = new System.Windows.Forms.Label();
@@ -109,8 +108,7 @@ namespace UnrealLibraryApp
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.оToolStripMenuItem,
-            this.манифестКоммунистическойПартииToolStripMenuItem});
+            this.оToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(65, 20);
             this.toolStripMenuItem2.Text = "Справка";
@@ -118,16 +116,9 @@ namespace UnrealLibraryApp
             // оToolStripMenuItem
             // 
             this.оToolStripMenuItem.Name = "оToolStripMenuItem";
-            this.оToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
+            this.оToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.оToolStripMenuItem.Text = "О программе...";
             this.оToolStripMenuItem.Click += new System.EventHandler(this.оToolStripMenuItem_Click);
-            // 
-            // манифестКоммунистическойПартииToolStripMenuItem
-            // 
-            this.манифестКоммунистическойПартииToolStripMenuItem.Name = "манифестКоммунистическойПартииToolStripMenuItem";
-            this.манифестКоммунистическойПартииToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.манифестКоммунистическойПартииToolStripMenuItem.Text = "Манифест коммунистической партии...";
-            this.манифестКоммунистическойПартииToolStripMenuItem.Click += new System.EventHandler(this.манифестКоммунистическойПартииToolStripMenuItem_Click);
             // 
             // labelBookName
             // 
@@ -405,7 +396,6 @@ namespace UnrealLibraryApp
         private System.Windows.Forms.ToolStripMenuItem открытьФайлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сохранитьФайлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem манифестКоммунистическойПартииToolStripMenuItem;
         private System.Windows.Forms.Button buttonTitleForm;
         private System.Windows.Forms.DateTimePicker dateTimePickerDayRead;
         private System.Windows.Forms.Label labelDayRead;

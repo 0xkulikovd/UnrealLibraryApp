@@ -114,12 +114,6 @@ namespace UnrealLibraryApp
             MessageBox.Show("Файл сохранён");
         }
 
-        private void манифестКоммунистическойПартииToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ManifestForm manForm = new ManifestForm();
-            manForm.Show();
-        }
-
         private void оToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(@"UNREAL LIBRARY
